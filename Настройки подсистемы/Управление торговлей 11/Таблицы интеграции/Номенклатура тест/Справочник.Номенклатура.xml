@@ -1,0 +1,105 @@
+﻿<FixedStructure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FixedStructure">
+	<Property name="Ключ">
+		<Value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d3p1:InformationRegisterRecordKey.SUI_НастройкиТаблицИнтеграции">
+			<d3p1:ТаблицаИнтеграции>Номенклатура</d3p1:ТаблицаИнтеграции>
+			<d3p1:ИмяОбъектаКонфигурации>Справочник.Номенклатура</d3p1:ИмяОбъектаКонфигурации>
+		</Value>
+	</Property>
+	<Property name="Данные">
+		<Value xsi:type="Structure">
+			<Property name="ТаблицаИнтеграции">
+				<Value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d5p1:EnumRef.SUI_ТаблицыИнтеграции">Номенклатура</Value>
+			</Property>
+			<Property name="ИмяОбъекта">
+				<Value xsi:type="xs:string">Справочник.Номенклатура</Value>
+			</Property>
+			<Property name="ИмяТаблицы">
+				<Value xsi:type="xs:string">РегистрСведений.SUI_tbl_goods</Value>
+			</Property>
+			<Property name="ОсновнойОбъект">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="Используется">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="СхемаКомпоновкиДанных">
+				<Value xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xsi:type="dcssch:DataCompositionSchema">
+					<dcssch:dataSource>
+						<dcssch:name>ИсточникДанных1</dcssch:name>
+						<dcssch:dataSourceType>Local</dcssch:dataSourceType>
+					</dcssch:dataSource>
+					<dcssch:dataSet xsi:type="dcssch:DataSetQuery">
+						<dcssch:name>НаборДанных1</dcssch:name>
+						<dcssch:dataSource>ИсточникДанных1</dcssch:dataSource>
+						<dcssch:query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+
+	*
+
+ИЗ
+
+	Справочник.Номенклатура
+
+{ГДЕ
+
+	Ссылка = &amp;Ссылка}</dcssch:query>
+					</dcssch:dataSet>
+					<dcssch:settingsVariant>
+						<dcsset:name>Основной</dcsset:name>
+						<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+						<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+					</dcssch:settingsVariant>
+				</Value>
+			</Property>
+			<Property name="НастройкиКомпоновкиДанных">
+				<Value xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xsi:type="dcsset:Settings">
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Ссылка</dcsset:field>
+							<dcsset:title>id</dcsset:title>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:title>name</dcsset:title>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Код</dcsset:field>
+							<dcsset:title>code</dcsset:title>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Артикул</dcsset:field>
+							<dcsset:title>art</dcsset:title>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЕдиницаИзмерения</dcsset:field>
+							<dcsset:title>unit</dcsset:title>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВидНоменклатуры.Наименование</dcsset:field>
+							<dcsset:title>type_good</dcsset:title>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+</FixedStructure>
