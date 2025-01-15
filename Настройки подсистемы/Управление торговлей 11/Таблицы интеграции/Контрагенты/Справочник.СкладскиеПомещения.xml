@@ -60,6 +60,23 @@
 			</Property>
 			<Property name="НастройкиКомпоновкиДанных">
 				<Value xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xsi:type="dcsset:Settings">
+					<dcsset:userFields>
+						<dcsset:item xsi:type="dcsset:UserFieldCase">
+							<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
+							<dcsset:title>ДопРеквизит</dcsset:title>
+							<dcsset:cases>
+								<dcsset:item>
+									<dcsset:filter>
+										<dcsset:item xsi:type="dcsset:FilterItemComparison">
+											<dcsset:left xsi:type="dcscor:Field">ТекущаяДолжностьОтветственного</dcsset:left>
+											<dcsset:comparisonType>Filled</dcsset:comparisonType>
+										</dcsset:item>
+									</dcsset:filter>
+									<dcsset:value xsi:type="xs:decimal">1</dcsset:value>
+								</dcsset:item>
+							</dcsset:cases>
+						</dcsset:item>
+					</dcsset:userFields>
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Ссылка</dcsset:field>
@@ -77,7 +94,18 @@
 							<dcsset:field>Наименование</dcsset:field>
 							<dcsset:title>name</dcsset:title>
 						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+							<dcsset:title>kpp</dcsset:title>
+						</dcsset:item>
 					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
 					<dcsset:item xsi:type="dcsset:StructureItemGroup">
 						<dcsset:order>
 							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
