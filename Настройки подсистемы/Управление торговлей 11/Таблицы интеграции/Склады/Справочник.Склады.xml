@@ -1,20 +1,20 @@
 ﻿<FixedStructure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FixedStructure">
 	<Property name="Ключ">
 		<Value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d3p1:InformationRegisterRecordKey.SUI_НастройкиТаблицИнтеграции">
-			<d3p1:ТаблицаИнтеграции>Номенклатура</d3p1:ТаблицаИнтеграции>
-			<d3p1:ИмяОбъектаКонфигурации>Справочник.Номенклатура</d3p1:ИмяОбъектаКонфигурации>
+			<d3p1:ТаблицаИнтеграции>Склады</d3p1:ТаблицаИнтеграции>
+			<d3p1:ИмяОбъектаКонфигурации>Справочник.Склады</d3p1:ИмяОбъектаКонфигурации>
 		</Value>
 	</Property>
 	<Property name="Данные">
 		<Value xsi:type="Structure">
 			<Property name="ТаблицаИнтеграции">
-				<Value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d5p1:EnumRef.SUI_ТаблицыИнтеграции">Номенклатура</Value>
+				<Value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d5p1:EnumRef.SUI_ТаблицыИнтеграции">Склады</Value>
 			</Property>
 			<Property name="ИмяОбъекта">
-				<Value xsi:type="xs:string">Справочник.Номенклатура</Value>
+				<Value xsi:type="xs:string">Справочник.Склады</Value>
 			</Property>
 			<Property name="ИмяТаблицы">
-				<Value xsi:type="xs:string">РегистрСведений.SUI_tbl_goods</Value>
+				<Value xsi:type="xs:string">РегистрСведений.SUI_tbl_warehouses</Value>
 			</Property>
 			<Property name="ОсновнойОбъект">
 				<Value xsi:type="xs:boolean">true</Value>
@@ -37,7 +37,7 @@
 
 ИЗ
 
-	Справочник.Номенклатура
+	Справочник.Склады
 
 {ГДЕ
 
@@ -52,28 +52,6 @@
 			</Property>
 			<Property name="НастройкиКомпоновкиДанных">
 				<Value xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xsi:type="dcsset:Settings">
-					<dcsset:userFields>
-						<dcsset:item xsi:type="dcsset:UserFieldCase">
-							<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
-							<dcsset:title>Маркировка</dcsset:title>
-							<dcsset:cases>
-								<dcsset:item>
-									<dcsset:filter>
-										<dcsset:item xsi:type="dcsset:FilterItemComparison">
-											<dcsset:left xsi:type="dcscor:Field">ВидНоменклатуры.ОсобенностьУчета</dcsset:left>
-											<dcsset:comparisonType>InList</dcsset:comparisonType>
-											<dcsset:right xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d12p1:EnumRef.ОсобенностиУчетаНоменклатуры">БАДы</dcsset:right>
-											<dcsset:right xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d12p1:EnumRef.ОсобенностиУчетаНоменклатуры">Антисептики</dcsset:right>
-											<dcsset:right xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d12p1:EnumRef.ОсобенностиУчетаНоменклатуры">Пиво</dcsset:right>
-											<dcsset:right xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d12p1:EnumRef.ОсобенностиУчетаНоменклатуры">ОбувнаяПродукция</dcsset:right>
-											<dcsset:right xmlns:d12p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d12p1:EnumRef.ОсобенностиУчетаНоменклатуры">УпакованнаяВода</dcsset:right>
-										</dcsset:item>
-									</dcsset:filter>
-									<dcsset:value xsi:type="xs:decimal">1</dcsset:value>
-								</dcsset:item>
-							</dcsset:cases>
-						</dcsset:item>
-					</dcsset:userFields>
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Ссылка</dcsset:field>
@@ -82,26 +60,6 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Наименование</dcsset:field>
 							<dcsset:title>name</dcsset:title>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>Код</dcsset:field>
-							<dcsset:title>code</dcsset:title>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>Артикул</dcsset:field>
-							<dcsset:title>art</dcsset:title>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ЕдиницаИзмерения</dcsset:field>
-							<dcsset:title>unit</dcsset:title>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ВидНоменклатуры.Наименование</dcsset:field>
-							<dcsset:title>type_good</dcsset:title>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
-							<dcsset:title>use_mark</dcsset:title>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter>
