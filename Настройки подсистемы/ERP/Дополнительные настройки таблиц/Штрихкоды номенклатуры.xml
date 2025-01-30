@@ -1,0 +1,21 @@
+﻿<FixedStructure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FixedStructure">
+	<Property name="Ключ">
+		<Value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d3p1:InformationRegisterRecordKey.SUI_ДополнительныеНастройкиТаблицИнтеграции">
+			<d3p1:ТаблицаИнтеграции>ШтрихкодыНоменклатуры</d3p1:ТаблицаИнтеграции>
+		</Value>
+	</Property>
+	<Property name="Данные">
+		<Value xsi:type="Structure">
+			<Property name="АлгоритмСозданияШтрихкодаНоменклатуры">
+				<Value xsi:type="Structure">
+					<Property name="Тип">
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:EnumRef.SUI_ТипыАлгоритмов">Произвольный</Value>
+					</Property>
+					<Property name="Алгоритм">
+						<Value xsi:type="xs:string">МенеджерЗаписи = РегистрыСведений.ШтрихкодыНоменклатуры.СоздатьМенеджерЗаписи();МенеджерЗаписи.Штрихкод 		= Штрихкод;МенеджерЗаписи.Номенклатура 	= Номенклатура;МенеджерЗаписи.Характеристика 	= Характеристика;МенеджерЗаписи.Упаковка 		= Упаковка;МенеджерЗаписи.Записать(Истина);</Value>
+					</Property>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+</FixedStructure>
