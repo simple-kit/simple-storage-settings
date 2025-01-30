@@ -1,0 +1,491 @@
+﻿<FixedStructure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FixedStructure">
+	<Property name="Ключ">
+		<Value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d3p1:CatalogRef.SUI_НастройкиДокументов">f04def37-50e0-11ef-ba8a-a0481ca6691d</Value>
+	</Property>
+	<Property name="Данные">
+		<Value xsi:type="Structure">
+			<Property name="Наименование">
+				<Value xsi:type="xs:string">Инвентаризация товаров</Value>
+			</Property>
+			<Property name="ПометкаУдаления">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="Используется">
+				<Value xsi:type="xs:boolean">true</Value>
+			</Property>
+			<Property name="ИспользуетсяМаркировка">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ПроводитьДокумент">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ИмяОбъектаМетаданных">
+				<Value xsi:type="xs:string">ИнвентаризацияТоваровНаСкладе</Value>
+			</Property>
+			<Property name="СинонимОбъектаМетаданных">
+				<Value xsi:type="xs:string">ИнвентаризацияТоваровНаСкладе</Value>
+			</Property>
+			<Property name="КонтролироватьДокумент">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="СостояниеДокументаПоУмолчанию">
+				<Value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d5p1:EnumRef.SUI_СостоянияДокументовОбмена">Новый</Value>
+			</Property>
+			<Property name="Предопределенный">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="НастройкиСхемыКомпоновкиДанных">
+				<Value xsi:nil="true"/>
+			</Property>
+			<Property name="ДополнительныеНастройки">
+				<Value xsi:type="Structure">
+					<Property name="АлгоритмыОбработкиСтрокТабличныхЧастей">
+						<Value xsi:type="Map"/>
+					</Property>
+					<Property name="АлгоритмыОбработкиСозданияДокументаНаОсновании">
+						<Value xsi:type="Map"/>
+					</Property>
+					<Property name="ОбработчикиСобытий">
+						<Value xsi:type="Structure">
+							<Property name="ПередЗаписью">
+								<Value xsi:type="xs:string"/>
+							</Property>
+							<Property name="ПослеЗаписи">
+								<Value xsi:type="xs:string"/>
+							</Property>
+						</Value>
+					</Property>
+					<Property name="ПараметрыИдентификацииСтрокТЧ">
+						<Value xsi:type="Map">
+							<pair>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
+								<Value xsi:type="Structure">
+									<Property name="ТипИдентификацииСтроки">
+										<Value xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d11p1:EnumRef.SUI_ТипыИдентификацииСтрокТЧ">ПоСовокупностиРеквизитов</Value>
+									</Property>
+									<Property name="РеквизитИдентификацииСтроки">
+										<Value xsi:type="xs:string"/>
+									</Property>
+									<Property name="РеквизитыИдентификацииСтроки">
+										<Value xsi:type="Array">
+											<Value xsi:type="xs:string">Номенклатура</Value>
+										</Value>
+									</Property>
+								</Value>
+							</pair>
+						</Value>
+					</Property>
+					<Property name="ПолучениеДополнительныхРеквизитов">
+						<Value xsi:type="Structure">
+							<Property name="ИзДокумента">
+								<Value xsi:type="FixedStructure">
+									<Property name="ТекстЗапроса">
+										<Value xsi:type="xs:string"/>
+									</Property>
+									<Property name="ВыполнятьВПакетномРежиме">
+										<Value xsi:type="xs:boolean">false</Value>
+									</Property>
+									<Property name="ПакетыРезультата">
+										<Value xsi:type="Array"/>
+									</Property>
+								</Value>
+							</Property>
+							<Property name="ИзТабличныхЧастей">
+								<Value xsi:type="Map"/>
+							</Property>
+						</Value>
+					</Property>
+					<Property name="АлгоритмыПолученияПризнакаМаркировки">
+						<Value xsi:type="Map">
+							<pair>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
+								<Value xsi:type="xs:string"/>
+							</pair>
+						</Value>
+					</Property>
+					<Property name="АлгоритмыПолученияСтатусаУказанияСерии">
+						<Value xsi:type="Map">
+							<pair>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
+								<Value xsi:type="xs:string"/>
+							</pair>
+						</Value>
+					</Property>
+					<Property name="АлгоритмыПолученияДополнительныхРеквизитов">
+						<Value xsi:type="Map">
+							<pair>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
+								<Value xsi:type="xs:string"/>
+							</pair>
+						</Value>
+					</Property>
+				</Value>
+			</Property>
+			<Property name="ЗагружатьВДокумент1СПослеПолученияИзТСД">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ГрупповоеСканирование">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="Комментарий">
+				<Value xsi:type="xs:string"/>
+			</Property>
+			<Property name="Ссылка">
+				<Value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d5p1:CatalogRef.SUI_НастройкиДокументов">f04def37-50e0-11ef-ba8a-a0481ca6691d</Value>
+			</Property>
+			<Property name="СоответствияРеквизитов">
+				<Value xsi:type="ValueTable">
+					<column>
+						<Name xsi:type="xs:string">Ключ</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>150</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>Ключ</Title>
+						<Width xsi:type="xs:decimal">150</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">Значение</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>150</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>Значение</Title>
+						<Width xsi:type="xs:decimal">150</Width>
+					</column>
+					<row>
+						<Value xsi:type="xs:string">id_countragents</Value>
+						<Value xsi:type="xs:string">Организация</Value>
+					</row>
+					<row>
+						<Value xsi:type="xs:string">id_warehouse</Value>
+						<Value xsi:type="xs:string">Склад</Value>
+					</row>
+				</Value>
+			</Property>
+			<Property name="НастройкиТабличныхЧастей">
+				<Value xsi:type="ValueTable">
+					<column>
+						<Name xsi:type="xs:string">КлючСвязи</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>36</Length>
+								<AllowedLength>Fixed</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>КлючСвязи</Title>
+						<Width xsi:type="xs:decimal">36</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">ТипТаблицы</Name>
+						<ValueType>
+							<Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:EnumRef.SUI_ТипыТаблицДокументовОбмена</Type>
+							<Type>Null</Type>
+						</ValueType>
+						<Title>ТипТаблицы</Title>
+						<Width xsi:type="xs:decimal">25</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">УдалятьПустыеСтроки</Name>
+						<ValueType>
+							<Type>xs:boolean</Type>
+							<Type>Null</Type>
+						</ValueType>
+						<Title>УдалятьПустыеСтроки</Title>
+						<Width xsi:type="xs:decimal">2</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">ИмяТабличнойЧасти</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>80</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>ИмяТабличнойЧасти</Title>
+						<Width xsi:type="xs:decimal">80</Width>
+					</column>
+					<row>
+						<Value xsi:type="xs:string">94c767bb-ec71-42b3-a9a4-60bbe9973324</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="xs:string">Товары</Value>
+					</row>
+				</Value>
+			</Property>
+			<Property name="СопоставлениеРеквизитовТабличныхЧастей">
+				<Value xsi:type="ValueTable">
+					<column>
+						<Name xsi:type="xs:string">КлючСвязи</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>36</Length>
+								<AllowedLength>Fixed</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>КлючСвязи</Title>
+						<Width xsi:type="xs:decimal">36</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">Поле</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>80</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>Поле</Title>
+						<Width xsi:type="xs:decimal">80</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">ИмяРеквизита</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>80</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>ИмяРеквизита</Title>
+						<Width xsi:type="xs:decimal">80</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">ИспользуетсяПостоянноеЗначение</Name>
+						<ValueType>
+							<Type>xs:boolean</Type>
+							<Type>Null</Type>
+						</ValueType>
+						<Title>ИспользуетсяПостоянноеЗначение</Title>
+						<Width xsi:type="xs:decimal">2</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">ПостоянноеЗначение</Name>
+						<ValueType>
+							<Type>xs:boolean</Type>
+							<Type>xs:string</Type>
+							<Type>xs:dateTime</Type>
+							<Type>Null</Type>
+							<Type>xs:decimal</Type>
+							<NumberQualifiers>
+								<Digits>10</Digits>
+								<FractionDigits>0</FractionDigits>
+								<AllowedSign>Any</AllowedSign>
+							</NumberQualifiers>
+							<StringQualifiers>
+								<Length>10</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+							<DateQualifiers>
+								<DateFractions>Date</DateFractions>
+							</DateQualifiers>
+						</ValueType>
+						<Title>ПостоянноеЗначение</Title>
+						<Width xsi:type="xs:decimal">10</Width>
+					</column>
+					<row>
+						<Value xsi:type="xs:string">94c767bb-ec71-42b3-a9a4-60bbe9973324</Value>
+						<Value xsi:type="xs:string">Номенклатура</Value>
+						<Value xsi:type="xs:string">Номенклатура</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xsi:type="xs:string">94c767bb-ec71-42b3-a9a4-60bbe9973324</Value>
+						<Value xsi:type="xs:string">Характеристика</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xsi:type="xs:string">94c767bb-ec71-42b3-a9a4-60bbe9973324</Value>
+						<Value xsi:type="xs:string">Серия</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xsi:type="xs:string">94c767bb-ec71-42b3-a9a4-60bbe9973324</Value>
+						<Value xsi:type="xs:string">Упаковка</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xsi:type="xs:string">94c767bb-ec71-42b3-a9a4-60bbe9973324</Value>
+						<Value xsi:type="xs:string">ВидЦены</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xsi:type="xs:string">94c767bb-ec71-42b3-a9a4-60bbe9973324</Value>
+						<Value xsi:type="xs:string">Цена</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xsi:type="xs:string">94c767bb-ec71-42b3-a9a4-60bbe9973324</Value>
+						<Value xsi:type="xs:string">КоличествоПлан</Value>
+						<Value xsi:type="xs:string">КоличествоУчет</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xsi:type="xs:string">94c767bb-ec71-42b3-a9a4-60bbe9973324</Value>
+						<Value xsi:type="xs:string">КоличествоФакт</Value>
+						<Value xsi:type="xs:string">Количество</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+				</Value>
+			</Property>
+			<Property name="НастройкиЗаполненияРеквизитовПередЗаписью">
+				<Value xsi:type="ValueTable">
+					<column>
+						<Name xsi:type="xs:string">Ссылка</Name>
+						<ValueType>
+							<Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.SUI_НастройкиДокументов</Type>
+							<Type>Null</Type>
+						</ValueType>
+						<Title>Ссылка</Title>
+						<Width xsi:type="xs:decimal">25</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">НомерСтроки</Name>
+						<ValueType>
+							<Type>Null</Type>
+							<Type>xs:decimal</Type>
+							<NumberQualifiers>
+								<Digits>5</Digits>
+								<FractionDigits>0</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</ValueType>
+						<Title>НомерСтроки</Title>
+						<Width xsi:type="xs:decimal">5</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">Ключ</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>150</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>Ключ</Title>
+						<Width xsi:type="xs:decimal">150</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">Значение</Name>
+						<ValueType>
+							<Type>Null</Type>
+							<Type>ValueStorage</Type>
+						</ValueType>
+						<Title>Значение</Title>
+						<Width xsi:type="xs:decimal">25</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">ПриРасхождении</Name>
+						<ValueType>
+							<Type>xs:boolean</Type>
+							<Type>Null</Type>
+						</ValueType>
+						<Title>ПриРасхождении</Title>
+						<Width xsi:type="xs:decimal">2</Width>
+					</column>
+				</Value>
+			</Property>
+			<Property name="НастройкиСозданияДокументовНаОснованииПослеЗаписи">
+				<Value xsi:type="ValueTable">
+					<column>
+						<Name xsi:type="xs:string">Ссылка</Name>
+						<ValueType>
+							<Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.SUI_НастройкиДокументов</Type>
+							<Type>Null</Type>
+						</ValueType>
+						<Title>Ссылка</Title>
+						<Width xsi:type="xs:decimal">25</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">НомерСтроки</Name>
+						<ValueType>
+							<Type>Null</Type>
+							<Type>xs:decimal</Type>
+							<NumberQualifiers>
+								<Digits>5</Digits>
+								<FractionDigits>0</FractionDigits>
+								<AllowedSign>Nonnegative</AllowedSign>
+							</NumberQualifiers>
+						</ValueType>
+						<Title>НомерСтроки</Title>
+						<Width xsi:type="xs:decimal">5</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">Ключ</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>150</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>Ключ</Title>
+						<Width xsi:type="xs:decimal">150</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">Значение</Name>
+						<ValueType>
+							<Type>xs:string</Type>
+							<Type>Null</Type>
+							<StringQualifiers>
+								<Length>150</Length>
+								<AllowedLength>Variable</AllowedLength>
+							</StringQualifiers>
+						</ValueType>
+						<Title>Значение</Title>
+						<Width xsi:type="xs:decimal">150</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">Проводить</Name>
+						<ValueType>
+							<Type>xs:boolean</Type>
+							<Type>Null</Type>
+						</ValueType>
+						<Title>Проводить</Title>
+						<Width xsi:type="xs:decimal">2</Width>
+					</column>
+					<column>
+						<Name xsi:type="xs:string">ПриРасхождении</Name>
+						<ValueType>
+							<Type>xs:boolean</Type>
+							<Type>Null</Type>
+						</ValueType>
+						<Title>ПриРасхождении</Title>
+						<Width xsi:type="xs:decimal">2</Width>
+					</column>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+</FixedStructure>
