@@ -1,0 +1,25 @@
+﻿<FixedStructure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FixedStructure">
+	<Property name="Ключ">
+		<Value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d3p1:ConstantValueKey.SUI_ПользовательскийЗапрос"/>
+	</Property>
+	<Property name="Данные">
+		<Value xsi:type="Structure">
+			<Property name="Использование">
+				<Value xsi:type="xs:boolean">false</Value>
+			</Property>
+			<Property name="ДанныеКонструктора">
+				<Value xsi:type="FixedStructure">
+					<Property name="ТекстЗапроса">
+						<Value xsi:type="xs:string"/>
+					</Property>
+					<Property name="ВыполнятьВПакетномРежиме">
+						<Value xsi:type="xs:boolean">false</Value>
+					</Property>
+					<Property name="ПакетыРезультата">
+						<Value xsi:type="Array"/>
+					</Property>
+				</Value>
+			</Property>
+		</Value>
+	</Property>
+</FixedStructure>
