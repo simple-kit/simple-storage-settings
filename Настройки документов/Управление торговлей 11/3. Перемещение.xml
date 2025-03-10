@@ -1,23 +1,23 @@
 ﻿<FixedStructure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FixedStructure">
 	<Property name="Ключ">
-		<Value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d3p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+		<Value xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d3p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 	</Property>
 	<Property name="Данные">
 		<Value xsi:type="Structure">
 			<Property name="Ссылка">
-				<Value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d5p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+				<Value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d5p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 			</Property>
 			<Property name="ВерсияДанных">
-				<Value xsi:type="xs:string">AAAAAAAVktQ=</Value>
+				<Value xsi:type="xs:string">AAAAFQAAAAA=</Value>
 			</Property>
 			<Property name="ПометкаУдаления">
 				<Value xsi:type="xs:boolean">false</Value>
 			</Property>
 			<Property name="Код">
-				<Value xsi:type="xs:string">000000065</Value>
+				<Value xsi:type="xs:string">000000006</Value>
 			</Property>
 			<Property name="Наименование">
-				<Value xsi:type="xs:string">КМ(CV)</Value>
+				<Value xsi:type="xs:string">3. Перемещение</Value>
 			</Property>
 			<Property name="ГрупповоеСканирование">
 				<Value xsi:type="xs:boolean">false</Value>
@@ -26,7 +26,7 @@
 				<Value xsi:type="xs:boolean">false</Value>
 			</Property>
 			<Property name="ИмяОбъектаМетаданных">
-				<Value xsi:type="xs:string">МаркировкаТоваровИСМП</Value>
+				<Value xsi:type="xs:string">ПеремещениеТоваров</Value>
 			</Property>
 			<Property name="Используется">
 				<Value xsi:type="xs:boolean">true</Value>
@@ -35,16 +35,16 @@
 				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
 			<Property name="Комментарий">
-				<Value xsi:type="xs:string">Настройка для работы в процессе "CV" - распознавание кодов маркировок с помощью камеры устройства.</Value>
+				<Value xsi:type="xs:string"/>
 			</Property>
 			<Property name="КонтролироватьДокумент">
-				<Value xsi:type="xs:boolean">false</Value>
+				<Value xsi:type="xs:boolean">true</Value>
 			</Property>
 			<Property name="ПроводитьДокумент">
 				<Value xsi:type="xs:boolean">false</Value>
 			</Property>
 			<Property name="СинонимОбъектаМетаданных">
-				<Value xsi:type="xs:string">МаркировкаТоваровИСМП</Value>
+				<Value xsi:type="xs:string">ПеремещениеТоваров</Value>
 			</Property>
 			<Property name="СостояниеДокументаПоУмолчанию">
 				<Value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d5p1:EnumRef.SUI_СостоянияДокументовОбмена">Новый</Value>
@@ -53,16 +53,13 @@
 				<Value xsi:type="xs:boolean">false</Value>
 			</Property>
 			<Property name="ComputerVision">
-				<Value xsi:type="xs:boolean">true</Value>
+				<Value xsi:type="xs:boolean">false</Value>
 			</Property>
 			<Property name="СоздаватьДокументыНаТСД">
-				<Value xsi:type="xs:boolean">true</Value>
+				<Value xsi:type="xs:boolean">false</Value>
 			</Property>
 			<Property name="АлгоритмСозданияНовогоДокумента">
-				<Value xsi:type="xs:string">ДокументОбъект.Комментарий = "Документ создан на " + ОбщегоНазначения.ЗначениеРеквизитаОбъекта(МобильноеУстройство, "Наименование");ДокументОбъект.Организация = Справочники.Организации.НайтиПоНаименованию("Управленческая организация");</Value>
-			</Property>
-			<Property name="ЗавершатьДокумент1СПослеПолученияИзТСД">
-				<Value xsi:type="xs:boolean">false</Value>
+				<Value xsi:type="xs:string"/>
 			</Property>
 			<Property name="Предопределенный">
 				<Value xsi:type="xs:boolean">false</Value>
@@ -73,7 +70,19 @@
 			<Property name="ДополнительныеНастройки">
 				<Value xsi:type="Structure">
 					<Property name="АлгоритмыОбработкиСтрокТабличныхЧастей">
-						<Value xsi:type="Map"/>
+						<Value xsi:type="Map">
+							<pair>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
+								<Value xsi:type="xs:string">СтруктураДействий = Новый Структура;
+СтруктураДействий.Вставить("ПересчитатьКоличествоЕдиниц");
+ОбработкаТабличнойЧастиСервер.ОбработатьСтрокуТЧ(ТекущаяСтрока, СтруктураДействий, Неопределено);
+
+мсвСтроки = Новый Массив();
+мсвСтроки.Добавить(ТекущаяСтрока);
+ПараметрыУказанияСерий = НоменклатураСервер.ПараметрыУказанияСерий(ДокументОбъект, ОбщегоНазначения.ОбщийМодуль("Документы.ПеремещениеТоваров"));
+НоменклатураСервер.ЗаполнитьСтатусыУказанияСерий(ДокументОбъект, ПараметрыУказанияСерий, мсвСтроки);</Value>
+							</pair>
+						</Value>
 					</Property>
 					<Property name="АлгоритмыОбработкиСозданияДокументаНаОсновании">
 						<Value xsi:type="Map"/>
@@ -102,7 +111,24 @@
 									<Property name="РеквизитыИдентификацииСтроки">
 										<Value xsi:type="Array">
 											<Value xsi:type="xs:string">Номенклатура</Value>
-											<Value xsi:type="xs:string">Упаковка</Value>
+											<Value xsi:type="xs:string">Характеристика</Value>
+										</Value>
+									</Property>
+								</Value>
+							</pair>
+							<pair>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Серии</Key>
+								<Value xsi:type="Structure">
+									<Property name="ТипИдентификацииСтроки">
+										<Value xmlns:d11p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d11p1:EnumRef.SUI_ТипыИдентификацииСтрокТЧ">ПоСовокупностиРеквизитов</Value>
+									</Property>
+									<Property name="РеквизитИдентификацииСтроки">
+										<Value xsi:type="xs:string"/>
+									</Property>
+									<Property name="РеквизитыИдентификацииСтроки">
+										<Value xsi:type="Array">
+											<Value xsi:type="xs:string">Номенклатура</Value>
+											<Value xsi:type="xs:string">Серия</Value>
 											<Value xsi:type="xs:string">Характеристика</Value>
 										</Value>
 									</Property>
@@ -130,19 +156,20 @@
 							</Property>
 						</Value>
 					</Property>
-					<Property name="ПропускатьПриЗаписи">
-						<Value xsi:type="Map"/>
-					</Property>
 					<Property name="АлгоритмыПолученияПризнакаМаркировки">
 						<Value xsi:type="Map">
-							<pair>
-								<Key xsi:type="xs:string">ИзДокумента</Key>
-								<Value xsi:type="xs:string">Параметры.Результат = Истина</Value>
-							</pair>
 							<pair>
 								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
 								<Value xsi:type="xs:string">ОсобенностьУчета = ОбщегоНазначения.ЗначениеРеквизитаОбъекта(Параметры.ДанныеСтроки.Номенклатура, "ВидНоменклатуры.ОсобенностьУчета");
 Параметры.Результат = (ЗначениеЗаполнено(ОсобенностьУчета) И ОсобенностьУчета &lt;&gt; Перечисления.ОсобенностиУчетаНоменклатуры.БезОсобенностейУчета);</Value>
+							</pair>
+							<pair>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Серии</Key>
+								<Value xsi:type="xs:string"/>
+							</pair>
+							<pair>
+								<Key xsi:type="xs:string">ИзДокумента</Key>
+								<Value xsi:type="xs:string">Параметры.Результат = Истина;</Value>
 							</pair>
 						</Value>
 					</Property>
@@ -150,6 +177,10 @@
 						<Value xsi:type="Map">
 							<pair>
 								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
+								<Value xsi:type="xs:string">Параметры.Результат = Параметры.ДанныеСтроки.СтатусУказанияСерий;</Value>
+							</pair>
+							<pair>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Серии</Key>
 								<Value xsi:type="xs:string"/>
 							</pair>
 						</Value>
@@ -157,24 +188,17 @@
 					<Property name="АлгоритмыПолученияДополнительныхРеквизитов">
 						<Value xsi:type="Map">
 							<pair>
-								<Key xsi:type="xs:string">ИзДокумента</Key>
-								<Value xsi:type="xs:string">Запрос = Новый Запрос;
-Запрос.УстановитьПараметр("ДокументСсылка", Параметры.ДокументСсылка);
-Запрос.Текст =
-"ВЫБРАТЬ
-|	МаркировкаТоваровИСМП.Комментарий КАК ДопИнфо
-|ИЗ
-|	Документ.МаркировкаТоваровИСМП КАК МаркировкаТоваровИСМП
-|ГДЕ
-|	МаркировкаТоваровИСМП.Ссылка = &amp;ДокументСсылка";
-
-Параметры.Результат = Запрос.Выполнить().Выгрузить();</Value>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
+								<Value xsi:type="xs:string"/>
 							</pair>
 							<pair>
-								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
-								<Value xsi:type="xs:string">Параметры.Результат = Новый Структура("Упаковка", Параметры.ДанныеСтроки.Упаковка);</Value>
+								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Серии</Key>
+								<Value xsi:type="xs:string"/>
 							</pair>
 						</Value>
+					</Property>
+					<Property name="ПропускатьПриЗаписи">
+						<Value xsi:type="Map"/>
 					</Property>
 				</Value>
 			</Property>
@@ -182,9 +206,9 @@
 				<Value xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xsi:type="dcsset:Settings">
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+							<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
 							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d8p1:CatalogRef.Организации">0d667f0c-c180-11e4-a7a9-000d884fd00d</dcsset:right>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
 						</dcsset:item>
 					</dcsset:filter>
 				</Value>
@@ -397,11 +421,20 @@
 						<Width xsi:type="xs:decimal">2</Width>
 					</column>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">1</Value>
-						<Value xsi:type="xs:string">b34b7470-1832-4825-8be1-b989777b33a7</Value>
+						<Value xsi:type="xs:string">81b811aa-4c9f-44bc-9e88-fe5383a4606e</Value>
 						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Value>
 						<Value xsi:type="xs:string">Товары</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+					</row>
+					<row>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
+						<Value xsi:type="xs:decimal">2</Value>
+						<Value xsi:type="xs:string">e9e66a12-a5a6-4211-9bad-0fe8293b9cd7</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Серии</Value>
+						<Value xsi:type="xs:string">Серии</Value>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:type="xs:boolean">false</Value>
 					</row>
@@ -459,10 +492,16 @@
 						<Width xsi:type="xs:decimal">150</Width>
 					</column>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">1</Value>
 						<Value xsi:type="xs:string">id_countragents</Value>
-						<Value xsi:type="xs:string">Контрагент</Value>
+						<Value xsi:type="xs:string">СкладПолучатель</Value>
+					</row>
+					<row>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
+						<Value xsi:type="xs:decimal">2</Value>
+						<Value xsi:type="xs:string">id_warehouse</Value>
+						<Value xsi:type="xs:string">СкладОтправитель</Value>
 					</row>
 				</Value>
 			</Property>
@@ -639,130 +678,122 @@
 						<Width xsi:type="xs:decimal">10</Width>
 					</column>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">1</Value>
-						<Value xsi:type="xs:string">b34b7470-1832-4825-8be1-b989777b33a7</Value>
+						<Value xsi:type="xs:string">81b811aa-4c9f-44bc-9e88-fe5383a4606e</Value>
 						<Value xsi:type="xs:string">Номенклатура</Value>
 						<Value xsi:type="xs:string">Номенклатура</Value>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:nil="true"/>
 					</row>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">2</Value>
-						<Value xsi:type="xs:string">b34b7470-1832-4825-8be1-b989777b33a7</Value>
+						<Value xsi:type="xs:string">81b811aa-4c9f-44bc-9e88-fe5383a4606e</Value>
 						<Value xsi:type="xs:string">Характеристика</Value>
 						<Value xsi:type="xs:string">Характеристика</Value>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:nil="true"/>
 					</row>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">3</Value>
-						<Value xsi:type="xs:string">b34b7470-1832-4825-8be1-b989777b33a7</Value>
+						<Value xsi:type="xs:string">81b811aa-4c9f-44bc-9e88-fe5383a4606e</Value>
 						<Value xsi:type="xs:string">Серия</Value>
-						<Value xsi:type="xs:string">Серия</Value>
+						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:nil="true"/>
 					</row>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">4</Value>
-						<Value xsi:type="xs:string">b34b7470-1832-4825-8be1-b989777b33a7</Value>
+						<Value xsi:type="xs:string">81b811aa-4c9f-44bc-9e88-fe5383a4606e</Value>
 						<Value xsi:type="xs:string">Упаковка</Value>
-						<Value xsi:type="xs:string">Упаковка</Value>
+						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:nil="true"/>
 					</row>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">5</Value>
-						<Value xsi:type="xs:string">b34b7470-1832-4825-8be1-b989777b33a7</Value>
+						<Value xsi:type="xs:string">81b811aa-4c9f-44bc-9e88-fe5383a4606e</Value>
 						<Value xsi:type="xs:string">ВидЦены</Value>
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:nil="true"/>
 					</row>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">6</Value>
-						<Value xsi:type="xs:string">b34b7470-1832-4825-8be1-b989777b33a7</Value>
+						<Value xsi:type="xs:string">81b811aa-4c9f-44bc-9e88-fe5383a4606e</Value>
 						<Value xsi:type="xs:string">Цена</Value>
 						<Value xsi:type="xs:string"/>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:nil="true"/>
 					</row>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">7</Value>
-						<Value xsi:type="xs:string">b34b7470-1832-4825-8be1-b989777b33a7</Value>
+						<Value xsi:type="xs:string">81b811aa-4c9f-44bc-9e88-fe5383a4606e</Value>
 						<Value xsi:type="xs:string">КоличествоПлан</Value>
 						<Value xsi:type="xs:string">КоличествоУпаковок</Value>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:nil="true"/>
 					</row>
 					<row>
-						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">582ad608-7986-11ef-bacc-a0481ca6691d</Value>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
 						<Value xsi:type="xs:decimal">8</Value>
-						<Value xsi:type="xs:string">b34b7470-1832-4825-8be1-b989777b33a7</Value>
+						<Value xsi:type="xs:string">81b811aa-4c9f-44bc-9e88-fe5383a4606e</Value>
 						<Value xsi:type="xs:string">КоличествоФакт</Value>
 						<Value xsi:type="xs:string">КоличествоУпаковок</Value>
 						<Value xsi:type="xs:boolean">false</Value>
 						<Value xsi:nil="true"/>
 					</row>
-				</Value>
-			</Property>
-			<Property name="НастройкиВыводаДополнительныхПолей">
-				<Value xsi:type="ValueTable">
-					<column>
-						<Name xsi:type="xs:string">Ссылка</Name>
-						<ValueType>
-							<Type xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d8p1:CatalogRef.SUI_НастройкиДокументов</Type>
-							<Type>Null</Type>
-						</ValueType>
-						<Title>Ссылка</Title>
-						<Width xsi:type="xs:decimal">25</Width>
-					</column>
-					<column>
-						<Name xsi:type="xs:string">НомерСтроки</Name>
-						<ValueType>
-							<Type>Null</Type>
-							<Type>xs:decimal</Type>
-							<NumberQualifiers>
-								<Digits>5</Digits>
-								<FractionDigits>0</FractionDigits>
-								<AllowedSign>Nonnegative</AllowedSign>
-							</NumberQualifiers>
-						</ValueType>
-						<Title>НомерСтроки</Title>
-						<Width xsi:type="xs:decimal">5</Width>
-					</column>
-					<column>
-						<Name xsi:type="xs:string">РеквизитДокумента</Name>
-						<ValueType>
-							<Type>xs:string</Type>
-							<Type>Null</Type>
-							<StringQualifiers>
-								<Length>150</Length>
-								<AllowedLength>Variable</AllowedLength>
-							</StringQualifiers>
-						</ValueType>
-						<Title>РеквизитДокумента</Title>
-						<Width xsi:type="xs:decimal">150</Width>
-					</column>
-					<column>
-						<Name xsi:type="xs:string">ИмяНаУстройстве</Name>
-						<ValueType>
-							<Type>xs:string</Type>
-							<Type>Null</Type>
-							<StringQualifiers>
-								<Length>100</Length>
-								<AllowedLength>Variable</AllowedLength>
-							</StringQualifiers>
-						</ValueType>
-						<Title>ИмяНаУстройстве</Title>
-						<Width xsi:type="xs:decimal">100</Width>
-					</column>
+					<row>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
+						<Value xsi:type="xs:decimal">9</Value>
+						<Value xsi:type="xs:string">e9e66a12-a5a6-4211-9bad-0fe8293b9cd7</Value>
+						<Value xsi:type="xs:string">Номенклатура</Value>
+						<Value xsi:type="xs:string">Номенклатура</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
+						<Value xsi:type="xs:decimal">10</Value>
+						<Value xsi:type="xs:string">e9e66a12-a5a6-4211-9bad-0fe8293b9cd7</Value>
+						<Value xsi:type="xs:string">Характеристика</Value>
+						<Value xsi:type="xs:string">Характеристика</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
+						<Value xsi:type="xs:decimal">11</Value>
+						<Value xsi:type="xs:string">e9e66a12-a5a6-4211-9bad-0fe8293b9cd7</Value>
+						<Value xsi:type="xs:string">Серия</Value>
+						<Value xsi:type="xs:string">Серия</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
+						<Value xsi:type="xs:decimal">12</Value>
+						<Value xsi:type="xs:string">e9e66a12-a5a6-4211-9bad-0fe8293b9cd7</Value>
+						<Value xsi:type="xs:string">Склад</Value>
+						<Value xsi:type="xs:string"/>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
+					<row>
+						<Value xmlns:d7p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d7p1:CatalogRef.SUI_НастройкиДокументов">d88abac4-5f8c-11ef-ba92-a0481ca6691d</Value>
+						<Value xsi:type="xs:decimal">13</Value>
+						<Value xsi:type="xs:string">e9e66a12-a5a6-4211-9bad-0fe8293b9cd7</Value>
+						<Value xsi:type="xs:string">КоличествоФакт</Value>
+						<Value xsi:type="xs:string">Количество</Value>
+						<Value xsi:type="xs:boolean">false</Value>
+						<Value xsi:nil="true"/>
+					</row>
 				</Value>
 			</Property>
 		</Value>
