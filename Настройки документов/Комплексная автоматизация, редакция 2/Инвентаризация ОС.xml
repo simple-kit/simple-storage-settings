@@ -120,7 +120,7 @@
 							</pair>
 							<pair>
 								<Key xsi:type="xs:string">ИзДокумента</Key>
-								<Value xsi:type="xs:string">Параметры.Результат = Параметры.ДокументСсылка.ОтветственноеЛицо.Наименование;</Value>
+								<Value xsi:type="xs:string"/>
 							</pair>
 						</Value>
 					</Property>
