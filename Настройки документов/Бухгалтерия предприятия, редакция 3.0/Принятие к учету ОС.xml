@@ -115,8 +115,7 @@
 						<Value xsi:type="Map">
 							<pair>
 								<Key xsi:type="xs:string">ИзДокумента</Key>
-								<Value xsi:type="xs:string">//Параметры.Результат = Параметры.ДокументСсылка.ОтветственноеЛицо.Наименование;  
-Параметры.Результат = Параметры.ДокументСсылка.МОЛБУ.Наименование;</Value>
+								<Value xsi:type="xs:string"/>
 							</pair>
 							<pair>
 								<Key xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d9p1:EnumRef.SUI_ТипыТаблицДокументовОбмена">Товары</Key>
